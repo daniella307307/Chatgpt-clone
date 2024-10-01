@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App{
+  display: flex;
+  color: white;
+  background-color: rgb(19, 20, 49);
+  position: absolute;
+  top: 0; bottom: 0; left: 0;right:0;
+}
+.sidebar{
+  width: 17%;
+  background-color: #171717;
+  padding: .5em ;
+  overflow-y: scroll;
+}
+.chatbox{
+  background-color: #212121;
+  width: 83%;
+}

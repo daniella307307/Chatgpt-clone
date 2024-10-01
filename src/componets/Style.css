@@ -11,3 +11,42 @@
     background:#171717;
     cursor: pointer;
 }
+
+.chat-container{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 2em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); 
+}
+.chat-bubble{
+  margin-left: 55vh;
+}
+.disclaimer{
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding: 2em;
+  margin-top: 3em;
+  text-align: center;
+}
+#message{
+  background: #2c2c2c;
+  border-radius: 3em 0em 3em 3em;
+  margin-top: 3em;
+}
+
+@media (max-width: 78px) {
+  .chat-bubble {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-bubble {
+    margin-left: 0;
+  }
+}

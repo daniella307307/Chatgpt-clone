@@ -1,59 +1,64 @@
-import { faEdit } from '@fortawesome/free-regular-svg-icons'
-import { faAtom, faEllipsis, faTableList } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
-
+import { faEdit } from '@fortawesome/free-regular-svg-icons';
+import { faAtom,  faTableList } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 
 function Sidebar() {
   return (
-    <div>
-       <div>
-         <div className='p-2'>
-            <FontAwesomeIcon icon={faTableList} className='float-left'/>
-            <FontAwesomeIcon icon={faEdit} className='float-right'/>
-         </div>
-         <div>
-          <ul className='list'>
-            <li className='mt-[3em]  pl-4 w-full p-1 rounded-[2em] hover:bg-gray-400'><FontAwesomeIcon icon={faAtom} className='text-[1em] mr-[.5em] border-2 rounded-full p-[.1em]'/> <span>ChatGPT</span> <FontAwesomeIcon icon={faEllipsis} className='float-right mt-2'/></li>
-            <li className='mt-[.5em] pl-4 w-full p-1 rounded-[2em] hover:bg-gray-400'><span className='text-[1.2em] mr-[.5em]  p-[.1em] material-symbols-outlined'>interests</span> <span>Explore GPTs</span> <FontAwesomeIcon icon={faEllipsis} className='float-right mt-2'/></li>
-          </ul>
-         </div>
-         <div className='mt-4'>
-          <span className='font-bold pl-2  text-[.9em]'>Today</span>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-         </div>
-         <div className='mt-4'>
-          <span className='font-bold pl-2  text-[.9em]'>Yesterday</span>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-         </div>
-         <div className='mt-4'>
-          <span className='font-bold pl-2  text-[.9em]'>June</span>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-          <p className='pl-4 text-gray-400 mt-4'>Using FontAwesomeIcon<FontAwesomeIcon className='float-right mt-2' icon={faEllipsis}/></p>
-         </div>
-        </div> 
+    <div className="sidebar-container h-screen  text-white w-64 overflow-y-auto">
+      <div className="sidebar-header p-4 flex justify-between items-center">
+        <FontAwesomeIcon icon={faTableList} className="text-lg" />
+        <FontAwesomeIcon icon={faEdit} className="text-lg" />
+      </div>
+
+      <ul className="list p-4">
+        <li className="sidebar-item flex items-center  justify-between p-2 rounded-lg hover:bg-gray-800">
+          <div className="flex items-center">
+            <FontAwesomeIcon icon={faAtom} className="text-lg mr-3" />
+            <span>ChatGPT</span>
+          </div>
+        </li>
+        <li className="sidebar-item flex items-center justify-between p-2 mt-2 rounded-lg hover:bg-gray-800">
+          <div className="flex items-center">
+            <span className="material-symbols-outlined text-lg mr-3">interests</span>
+            <span>Explore GPTs</span>
+          </div>
+        </li>
+      </ul>
+
+      <div className="sections p-4">
+        {/* Today Section */}
+        <div className="section mb-6">
+          <span className="font-bold text-sm">Today</span>
+          {renderSectionItems(8)}
+        </div>
+
+        {/* Yesterday Section */}
+        <div className="section mb-6">
+          <span className="font-bold text-sm">Yesterday</span>
+          {renderSectionItems(4)}
+        </div>
+
+        {/* June Section */}
+        <div className="section">
+          <span className="font-bold text-sm">September</span>
+          {renderSectionItems(5)}
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Sidebar
+const renderSectionItems = (count) => {
+  const items = [];
+  for (let i = 0; i < count; i++) {
+    items.push(
+      <p key={i} className="text-gray-400 p-2 mt-2  items-center hover:bg-gray-800 rounded-lg">
+        Using FontAwesomeIcon
+      </p>
+    );
+  }
+  return items;
+};
+
+export default Sidebar;

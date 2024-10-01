@@ -15,12 +15,31 @@
   top: 0; bottom: 0; left: 0;right:0;
 }
 .sidebar{
-  width: 17%;
   background-color: #171717;
-  padding: .5em ;
-  overflow-y: scroll;
 }
 .chatbox{
   background-color: #212121;
-  width: 83%;
+  width: 90%;
+}
+/* Webkit Scrollbar Styling */
+::-webkit-scrollbar {
+  background-color: #212121;
+  width: 0.5em;  
+  height: 0.5em; 
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background-color: #212121;
+}
+
+/* Scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #757575;
+  border-radius: 1em; 
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555555; 
 }

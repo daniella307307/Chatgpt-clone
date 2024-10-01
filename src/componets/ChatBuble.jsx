@@ -11,29 +11,38 @@ function ChatBuble({onSendMessage}) {
       setMessage('');
     }
   }
-  const handleKeyDown = (e) => {
-    if (e.ctrlKey && e.key === 'Enter') {
-      // Insert a new line
-      setMessage((prev) => prev + '\n');
-      e.preventDefault(); // Prevent the default action
+  const handleSend = () => {
+    if (message.trim()) {
+      onSendMessage(message)
+      console.log(message); 
+      setMessage(''); 
     }
   };
-  const handleKeyPress= (e)=>{
-    if(e.key === 'Enter'){
-      handleSendMessage();
+  const handleChange = (e) => {
+    setMessage(e.target.value);
+  };
+  const handleKeyDown = (e) => {
+    if (e.ctrlKey && e.key === 'Enter') {
+      
+      e.preventDefault();
+    } else if (e.key === 'Enter') {
+     
+      handleSend();
+      e.preventDefault(); 
     }
-  }
+  };
   return (
    <div>
      <div className='chat-container'>
       <div className='chat-bubble bg-transparent h-[3.5em] text-center flex items-center justify-between rounded-full border-white border-[2px] w-[65vh] px-4'>
         <FontAwesomeIcon icon={faPaperclip} className='text-white text-2xl'/>
-        <input 
-          type='text' 
-          className='w-full mx-3 p-2 bg-transparent outline-none text-white' 
+        <input
+          value={message}
+          onChange={handleChange}
+          onKeyDown={handleKeyDown} // Attach the keydown event handler
+          className='w-full mx-3 p-2 bg-transparent outline-none resize-none'
           placeholder='Message ChatGPT'
-          onChange={(e) => setMessage(e.target.value)}
-          onKeyPress={handleKeyPress}
+          rows={1} // Control initial visible rows
         />
         <FontAwesomeIcon icon={faArrowCircleUp} className='text-white text-2xl'  onClick={handleSendMessage}/>
       </div>

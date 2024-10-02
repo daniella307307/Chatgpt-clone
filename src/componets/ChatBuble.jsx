@@ -23,7 +23,7 @@ function ChatBuble({onSendMessage}) {
   };
   const handleKeyDown = (e) => {
     if (e.ctrlKey && e.key === 'Enter') {
-      
+       
       e.preventDefault();
     } else if (e.key === 'Enter') {
      

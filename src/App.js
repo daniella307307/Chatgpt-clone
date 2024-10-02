@@ -1,15 +1,26 @@
 import "./App.css";
-import Sidebar from './componets/Sidebar'
-import ChatBox from './componets/ChatBox'
+import Chatbox from './componets/ChatBox'
+import LoginComponent from "./componets/LoginComponent";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import Sidebar from "./componets/Sidebar";
+
 function App() {
   return (
     <div className="App">
-      <div className="sidebar ">
-        <Sidebar />
-      </div>
-      <div className="chatbox">
-        <ChatBox />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginComponent />} />
+          <Route 
+            path="/home" 
+            element={
+              <div>
+                <Sidebar/>
+                <Chatbox/>
+              </div>
+            } 
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

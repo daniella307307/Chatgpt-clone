@@ -1,5 +1,4 @@
 import React from "react";
-import profile from "./profile.jpeg"; // Ensure the profile image path is correct
 import "./Style.css";
 
 function Chat({ messages }) {

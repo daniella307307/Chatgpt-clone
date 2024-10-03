@@ -1,24 +1,15 @@
-import "./App.css";
-import Chatbox from './componets/ChatBox'
-import LoginComponent from "./componets/LoginComponent";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
-import Sidebar from "./componets/Sidebar";
+import "./App.css"
+import LoginComponent from './componets/LoginComponent'
+import HomePage from "./componets/HomePage"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LoginComponent />} />
-          <Route 
-            path="/home" 
-            element={
-              <div>
-                <Sidebar/>
-                <Chatbox/>
-              </div>
-            } 
-          />
+          <Route path="/" exact Component={<LoginComponent />} />
+          <Route path="/home" Component={<HomePage />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -26,3 +17,4 @@ function App() {
 }
 
 export default App;
+
